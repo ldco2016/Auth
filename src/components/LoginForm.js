@@ -42,7 +42,11 @@ class LoginForm extends Component {
       return <Spinner size="small" />;
     }
 
-    return <Button onPress={this.onButtonPress.bind(this)}>Log in</Button>;
+    return (
+      <Button onPress={this.onButtonPress.bind(this)}>
+        Log in
+      </Button>
+    );
   }
 
   render() {
@@ -67,9 +71,13 @@ class LoginForm extends Component {
           />
         </CardSection>
 
-        <Text style={styles.errorTextStyle}>{this.state.error}</Text>
+        <Text style={styles.errorTextStyle}>
+          {this.state.error}
+        </Text>
 
-        <CardSection>{this.renderButton()}</CardSection>
+        <CardSection>
+          {this.renderButton()}
+        </CardSection>
       </Card>
     );
   }
